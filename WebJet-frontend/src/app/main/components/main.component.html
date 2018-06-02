@@ -1,0 +1,22 @@
+<header class="header-bar ui-g-12 ui-g-nopad">
+    <h2>Movie List</h2>
+</header>
+
+<aside class="ui-g-12 ui-g-nopad">
+    <div class="main-body">
+        <div *ngIf="_movieList.length === 0">{{_message}}</div>
+        <article class="ui-md-3 ui-lg-3 ui-g-nopad" *ngFor="let movie of _movieList">
+            <p-card [title]="movie.title">
+            <div class="outer-shell">
+                <span><b>Price:</b></span>
+                    <div *ngFor="let priceDetails of movie.price">
+                    ${{priceDetails.price}} - source {{priceDetails.source}}
+                    </div>
+                <span><b>Plot:</b></span><div>{{movie.plot}}</div>
+            </div>
+            </p-card>
+        </article>
+    </div>
+</aside>
+
+

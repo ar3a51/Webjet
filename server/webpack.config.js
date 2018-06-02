@@ -27,8 +27,27 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            vendors: {
+                name: 'vendors',
+                chunks: 'all',
+                reuseExistingChunk: true,
+                priority: 1,
+                enforce: true,
+                test(module, chunks) {
+                    const name = module.nameForCondition && module.nameForCondition();
+                    return chunks.some(chunk => {
+                        return chunk.name === 'main' && /[\\/]node_modules[\\/]/.test(name);
+                    });
+                }
+            },
+        }
+    }
+},
   output: {
-    path: path.join(__dirname, '../dist/server'),
+    path: path.join(__dirname, 'dist'),
     filename: 'server.js',
   },
 };

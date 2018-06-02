@@ -4,6 +4,7 @@
   "description": "movie-list-backend",
   "author": "hanggara-prameswara",
   "license": "MIT",
+  "main": "dist/main.js",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
@@ -25,7 +26,8 @@
     "axios": "^0.18.0",
     "fastify-formbody": "^2.0.0",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0"
+    "rxjs": "^6.0.0",
+    "typescript": "^2.6.2"
   },
   "devDependencies": {
     "@types/express": "^4.0.39",
@@ -43,8 +45,8 @@
     "tslint": "5.3.2",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
-    "webpack-node-externals": "^1.6.0",
-    "typescript": "^2.6.2"
+    "webpack-node-externals": "^1.6.0"
+    
   },
   "jest": {
     "moduleFileExtensions": [

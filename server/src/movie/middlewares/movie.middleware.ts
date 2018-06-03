@@ -4,7 +4,7 @@ import {
   MiddlewareFunction
 }   from '@nestjs/common';
 
-import path from 'path';
+let path = require('path');
 import {join}   from 'path';
 import {webjet} from '../../environment';
 
@@ -26,9 +26,9 @@ export class MovieMiddleware implements NestMiddleware {
         next();
       } else if (url.indexOf(".") > -1) {
         // it has a file extension --> resolve the file
-        res.sendFile(this.resolvePath(url));
+        res.sendFile(path.resolve(`dist/webjet/${url}`));
       } else {
-        res.sendFile(this.resolvePath("index.html"));
+        res.sendFile(path.resolve("dist/webjet/index.html"));
       }
     };
   }

@@ -12,7 +12,7 @@ export class MovieRepository {
   
   
   private _baseUrl: string = "http://webjetapitest.azurewebsites.net";
-  private _timeout: number = 7000;
+  private _timeout: number = 10000;
 
   constructor(
     private _httpService:HttpService

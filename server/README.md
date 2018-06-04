@@ -13,26 +13,9 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# Compile the app
+$ npm prestart:prod
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+# Start the app
+$ npm start
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-

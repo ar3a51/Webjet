@@ -24,6 +24,12 @@ export class MainComponent implements OnInit{
     ){}
     public ngOnInit(): void {
         this._mainService.getAllMovies().subscribe((movies:any) => {
+
+            if (movies && movies.length == 0)
+            {
+                this._message = "No Movies found";
+
+            }
             
            movies = _.groupBy(movies,"Title");
             for (let movie in movies)

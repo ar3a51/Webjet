@@ -4,10 +4,10 @@
   "description": "movie-list-backend",
   "author": "hanggara-prameswara",
   "license": "MIT",
-  "main": "dist/main.js",
+  "main": "dist/server.js",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",
-    "start": "npm run start:prod",
+    "start": "node dist/server.js",
     "start:dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "start:mon": "nodemon",
     "prestart:prod": "tsc",

@@ -4,7 +4,7 @@
 
 <aside class="ui-g-12 ui-g-nopad">
     <div class="main-body">
-        <div *ngIf="_movieList.length === 0">{{_message}}</div>
+        <div *ngIf="_movieList.length === 0"><h3>{{_message}}</h3></div>
         <article class="ui-md-3 ui-lg-3 ui-g-nopad" *ngFor="let movie of _movieList">
             <p-card [title]="movie.title">
             <div class="outer-shell">
